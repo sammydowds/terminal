@@ -7,7 +7,24 @@ Terminal is a Retrieval Augmented Generation (RAG) framework designed to facilit
 
 ### Database
 
+Start the database:
+```bash
+cd docker && docker compose up -d
+```
+
+Initialize table:
+```bash
+psql -h localhost -p 5432 -U user -d terminal -f ../db/init.sql
+```
+
 ### Populating Vector DB
+
+Run the ingestion over a specified folder containing PDF's you would like to use as the target for queries. Ingestion consists of looping through files, chunking them (with overlap), and saving the embedding to a postgres db.
+```python
+t = Terminal()
+
+t.ingest('documents')
+```
 
 ### Starting API 
 
