@@ -16,9 +16,6 @@ class Ingestor:
     """
     Initializes the Ingestor class by establishing a database connection
     and setting up the OpenAI client.
-    
-    Raises:
-        ConnectionError: If the database connection fails.
     """
     try:
       self.db = psycopg2.connect(f"dbname={DB_NAME} user={DB_USER} password={DB_PASSWORD} host={DB_HOST}")
@@ -30,16 +27,6 @@ class Ingestor:
   def save_embedding(self, embedding, content):
     """
     Persists the embeddings and content to the database.
-
-    Args:
-        embedding (list): The embedding vector to be saved.
-        content (str): The text content associated with the embedding.
-
-    Returns:
-        bool: True if the operation is successful.
-
-    Raises:
-        Exception: If the database operation fails.
     """
     try:
       self.cursor.execute("INSERT INTO documents (content, embedding) VALUES (%s, %s)", (content, embedding))
@@ -52,12 +39,6 @@ class Ingestor:
   def generate_embedding(self, chunk):
     """
     Generates an embedding for a given text chunk using OpenAI.
-
-    Args:
-        chunk (str): The text chunk to generate an embedding for.
-
-    Returns:
-        list: The generated embedding vector.
     """
     embeddings_res = self.openai.embeddings.create(model='text-embedding-ada-002', input=chunk)
     return embeddings_res.data[0].embedding
@@ -65,12 +46,6 @@ class Ingestor:
   def chunk_pdf(self, path):
     """
     Loads a PDF file and splits its content into overlapping chunks.
-
-    Args:
-        path (str): The file path to the PDF document.
-
-    Returns:
-        list: A list of text chunks extracted from the PDF.
     """
     loader = PyPDFLoader(path)
     text_splitter = RecursiveCharacterTextSplitter(
@@ -85,15 +60,6 @@ class Ingestor:
     """
     Processes PDF files in a specified folder, generating embeddings
     for each chunk and saving them to the database.
-
-    Args:
-        folder (str): The path to the folder containing PDF files.
-
-    Returns:
-        int: The number of successfully processed PDF files.
-
-    Raises:
-        ValueError: If the folder is not specified or does not exist.
     """
     if folder is None:
       raise ValueError("No folder supplied for ingestion.")
