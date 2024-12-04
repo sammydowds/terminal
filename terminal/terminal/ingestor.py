@@ -6,10 +6,7 @@ import os
 import pymupdf 
 
 load_dotenv()
-DB_NAME=os.getenv('DB_NAME')
-DB_USER=os.getenv('DB_USER')
-DB_PASSWORD=os.getenv('DB_PASSWORD')
-DB_HOST=os.getenv('DB_HOST')
+DB_URL=os.getenv('DATABASE_URL')
 
 class Ingestor:
   def __init__(self):
@@ -18,7 +15,7 @@ class Ingestor:
     and setting up the OpenAI client.
     """
     try:
-      self.db = psycopg2.connect(f"dbname={DB_NAME} user={DB_USER} password={DB_PASSWORD} host={DB_HOST}")
+      self.db = psycopg2.connect(DB_URL)
       self.cursor = self.db.cursor()
       self.openai = OpenAI()
     except psycopg2.Error as e:
