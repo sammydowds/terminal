@@ -1,9 +1,9 @@
 from openai import OpenAI 
-from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import psycopg2
 from dotenv import load_dotenv
 import os
+import pymupdf 
 
 load_dotenv()
 DB_NAME=os.getenv('DB_NAME')
@@ -45,16 +45,22 @@ class Ingestor:
   
   def chunk_pdf(self, path):
     """
-    Loads a PDF file and splits its content into overlapping chunks.
+    Loads a PDF file and splits its content into overlapping chunks splitting on lines.
     """
-    loader = PyPDFLoader(path)
+    doc = pymupdf.open(path)
+    text = ""
+    for page in doc:
+        text += page.get_text()
+    doc.close()
+
     text_splitter = RecursiveCharacterTextSplitter(
-      chunk_size=100, 
-      chunk_overlap=50,
-      separators=["\n\n", "\n", " ", ""]
+        chunk_size=100,
+        chunk_overlap=0,
+        length_function=len,
+        separators=["\n", ".", "!", "?"]
     )
-    chunks = loader.load_and_split(text_splitter)
-    return chunks
+    chunks = text_splitter.split_text(text)
+    return chunks 
 
   def ingest(self, folder=None):
     """
@@ -77,9 +83,8 @@ class Ingestor:
       try:
         chunks = self.chunk_pdf(file_path)
         for chunk in chunks:
-          content = chunk.page_content 
-          embedding = self.generate_embedding(content)
-          self.save_embedding(embedding, content)
+          embedding = self.generate_embedding(chunk)
+          self.save_embedding(embedding, chunk)
         processed_files += 1
       except Exception as e:
         print(f"Error processing {file_path}: {e}")
