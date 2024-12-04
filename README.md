@@ -8,7 +8,7 @@ Terminal is a project that helps get a simple RAG (Retrieval-Augmented Generatio
 ### Database
 Start the database:
 ```bash
-cd docker && docker compose up -d
+cd terminal/terminal/docker && docker compose up -d
 ```
 Note: this project utilizes the pgvector/pgvector image referenced [here](https://github.com/pgvector/pgvector?tab=readme-ov-file#docker). 
 
@@ -22,11 +22,7 @@ psql -h localhost -p 5432 -U user -d terminal -f ../db/init.sql
 Ensure you have a local .env containing the following:
 ```bash
 OPENAI_API_KEY=<insert your openai key>
-DB_NAME=terminal
-DB_USER=user
-DB_PASSWORD=password123
-DB_HOST=localhost
-DB_PORT=5432
+DATABASE_URL=<insert local database URL>
 ```
 
 Note: OpenAI is used to generate the embeddings.
