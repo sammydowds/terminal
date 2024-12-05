@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-dvh overflow-y-auto bg-stone-100 text-black relative">
-      <div className="h-max max-md:w-full md:w-[500px] flex flex-col gap-4 pt-4 pb-[90px] max-md:px-4">
+      <div className="h-max max-md:w-full md:w-[500px] flex flex-col gap-4 pt-4 pb-[140px] max-md:px-4">
         {messages.map((m) => (
           <div key={m.id} className="w-full flex flex-col">
             <div
@@ -37,10 +37,27 @@ export default function Home() {
         ))}
         <div ref={messagesEndRef} />
       </div>
-      <div className="w-full fixed bottom-0 max-w-[500px] max-md:px-4 max-md:bg-white max-md:py-2 max-md:border-t-[1px]">
-        <form onSubmit={handleSubmit} className="relative">
+      <div className="w-full fixed bottom-0 max-w-[500px] max-md:bg-white max-md:py-2 max-md:border-t-[1px]">
+        <div className="overflow-x-auto flex gap-2 whitespace-nowrap my-2 max-md:px-2">
+          {[
+            "Have you used React?",
+            "Where did you go to college?",
+            "What year did you graduate college?",
+          ].map((question) => (
+            <button
+              key={question}
+              className="px-4 py-[4px] bg-white border-[1px] border-stone-400 border-dashed text-stone-600 text-sm rounded-full"
+              onClick={() => handleInputChange({ target: { value: question } })}
+            >
+              {question}
+            </button>
+          ))}
+        </div>
+        <form onSubmit={handleSubmit} className="relative max-md:px-2">
+          {/* Suggested questions carousel */}
+
           <input
-            className="w-full p-4 md:mb-12 border border-gray-300 rounded md:shadow-xl text-[18px]"
+            className="w-full p-3 md:mb-12 border border-gray-300 rounded md:shadow-xl text-[18px]"
             value={input}
             placeholder="Ask something..."
             onChange={handleInputChange}
@@ -49,7 +66,7 @@ export default function Home() {
             onClick={handleSubmit}
             disabled={isLoading || !input}
             className={cn(
-              "absolute top-2 md:right-2 max-md:right-2 p-2 h-11 w-11 border-2 flex items-center justify-center rounded-full bg-blue-600 text-white",
+              "absolute top-1 md:right-2 max-md:right-3 p-2 h-11 w-11 border-2 flex items-center justify-center rounded-full bg-blue-600 text-white",
               isLoading || !input ? "bg-stone-300" : "",
             )}
           >
