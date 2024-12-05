@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-dvh overflow-y-auto bg-stone-100 text-black relative">
-      <div className="h-max max-md:w-full md:w-[500px] flex flex-col gap-4 pt-4 pb-[140px] max-md:px-4">
+      <div className="h-max max-md:w-full md:w-[500px] flex flex-col gap-4 pt-4 md:pb-[200px] max-md:pb-[140px] max-md:px-4">
         {messages.map((m) => (
           <div key={m.id} className="w-full flex flex-col">
             <div
@@ -46,7 +46,7 @@ export default function Home() {
           ].map((question) => (
             <button
               key={question}
-              className="px-4 py-[4px] bg-white border-[1px] whitespace-nowrap border-stone-400 border-dashed text-stone-600 text-sm rounded-full"
+              className="px-4 py-[4px] bg-white border-[1px] whitespace-nowrap border-stone-500 border-dashed text-stone-600 text-sm rounded-full"
               onClick={() => handleInputChange({ target: { value: question } })}
             >
               {question}
