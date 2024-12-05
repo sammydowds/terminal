@@ -36,15 +36,19 @@ class Processor:
 
     def retrieve_content(self, query):
         """
-        Retrieves content via L2 distance
+        Retrieves content according to threshold.
         """
         query_embedding = self.generate_embedding(query)
+        threshold = 0.3 
         self.cursor.execute("""
-            SELECT content FROM documents ORDER BY embedding <-> %s::vector LIMIT 5;
-        """, (query_embedding,))
+            SELECT content, (1 - (embedding <=> %s::vector)) AS similarity
+            FROM documents
+            WHERE (1 - (embedding <=> %s::vector)) > %s
+            ORDER BY embedding <=> %s::vector LIMIT 5;
+        """, (query_embedding, query_embedding, threshold, query_embedding))
 
         results = self.cursor.fetchall()
-        return [result[0] for result in results]
+        return [result[0] for result in results if result[1] > threshold]
 
     def generate_embedding(self, query):
         """

@@ -6,7 +6,9 @@ class ResumeProcessor(Processor):
         Streams the response from OpenAI for a given question and resume content.
         """
         if not content:
-            return "I am sorry, I could not find an exact answer for that."
+            yield "I am sorry, I could not find an exact answer for that."
+            return
+
         prompt = f"""Given a question about a resume and a relevant excerpt from that resume, provide a clear, 
             professional response that connects the resume content to the question asked. Focus on highlighting relevant 
             skills, experiences, and achievements.

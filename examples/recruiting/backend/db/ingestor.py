@@ -14,10 +14,10 @@ class ResumeIngestor(Ingestor):
         doc.close()
 
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=100,
+            chunk_size=200,
             chunk_overlap=0,
             length_function=len,
-            separators=["\n", ".", "!", "?", "▪"]
+            separators=["\n", ".", "!", "?"]
         )
         chunks = text_splitter.split_text(text)
         return chunks 
