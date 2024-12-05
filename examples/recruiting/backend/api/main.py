@@ -24,7 +24,6 @@ class Payload(BaseModel):
 
 @app.post("/api/chat")
 async def chat(payload: Payload):
-    print(payload)
     messages = payload.messages
     query = messages[-1].content
 

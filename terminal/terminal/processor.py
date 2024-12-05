@@ -53,7 +53,7 @@ class Processor:
         embeddings_res = self.openai.embeddings.create(model='text-embedding-ada-002', input=query)
         return embeddings_res.data[0].embedding
     
-     def stream_completion(self, content, query):
+    def stream_completion(self, content, query):
         """
         Streams the response from OpenAI for a given question and retrieved content.
         """

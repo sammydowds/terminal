@@ -1,4 +1,6 @@
-from terminal.ingestor import Ingestor 
+from terminal.ingestor import Ingestor
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+import pymupdf 
 
 class ResumeIngestor(Ingestor):
     def chunk_pdf(self, path):
