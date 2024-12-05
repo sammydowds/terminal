@@ -40,7 +40,7 @@ export default function Home() {
       <div className="w-full fixed bottom-0 max-w-[500px] max-md:px-4 max-md:bg-white max-md:py-2 max-md:border-t-[1px]">
         <form onSubmit={handleSubmit} className="relative">
           <input
-            className="w-full p-2 md:mb-12 border border-gray-300 rounded md:shadow-xl text-[18px]"
+            className="w-full p-4 md:mb-12 border border-gray-300 rounded md:shadow-xl text-[18px]"
             value={input}
             placeholder="Ask something..."
             onChange={handleInputChange}
@@ -49,14 +49,14 @@ export default function Home() {
             onClick={handleSubmit}
             disabled={isLoading || !input}
             className={cn(
-              "absolute top-1 md:right-2 max-md:right-2 p-2 h-9 w-9 border-2 flex items-center justify-center rounded-full bg-blue-600 text-white",
+              "absolute top-2 md:right-2 max-md:right-2 p-2 h-11 w-11 border-2 flex items-center justify-center rounded-full bg-blue-600 text-white",
               isLoading || !input ? "bg-stone-300" : "",
             )}
           >
             {isLoading ? (
               <LoaderCircle className="animate-spin" size={16} />
             ) : (
-              <Send size={12} />
+              <Send size={20} />
             )}
           </button>
         </form>
