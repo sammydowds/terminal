@@ -8,6 +8,7 @@ processor = ResumeProcessor()
 @app.get("/api/chat")
 async def root(q: str = "", stream: bool = False):
     content = processor.retrieve_content(q)
+
     if not query:
         return {"error": "Query parameter 'q' is required."}, 400
     
