@@ -30,7 +30,7 @@ class Processor:
             max_tokens=150,
             n=1,
             stop=None,
-            temperature=0.5,
+            temperature=0.2,
         )
         return response.choices[0].text.strip()
 
@@ -65,7 +65,7 @@ class Processor:
             model="gpt-4o-mini",
             prompt=prompt,
             max_tokens=150,
-            temperature=0.5,
+            temperature=0.2,
             stream=True
         )
         for chunk in stream:

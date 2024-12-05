@@ -4,13 +4,16 @@ from fastapi.middleware.cors import CORSMiddleware
 from .processor import ResumeProcessor
 from pydantic import BaseModel, Field
 from typing import List
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 app = FastAPI()
 processor = ResumeProcessor()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjust this to specify allowed origins
+    allow_origins=[os.getenv("FRONTEND_ORIGIN")],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
