@@ -19,13 +19,13 @@ class Processor:
         except psycopg2.Error as e:
             raise ConnectionError(f"Failed to connect to database: {e}")
 
-    def process_content(self, content, query):
+    def completion(self, content, query):
         """
         Take search results, and expand with openAI
         """
         prompt = f'You are given an answer and question, please create a more clear answer for the question based on the answer provided: Answer: {content[0]}, Question: {query}'
         response = self.openai.completions.create(
-            model="gpt-3.5-turbo-instruct",
+            model="gpt-4o-mini",
             prompt=prompt,
             max_tokens=150,
             n=1,
@@ -53,9 +53,20 @@ class Processor:
         embeddings_res = self.openai.embeddings.create(model='text-embedding-ada-002', input=query)
         return embeddings_res.data[0].embedding
     
-    def process_query(self, query):
+     def stream_completion(self, content, query):
         """
-        Retrieve relevant content and augment response.
+        Streams the response from OpenAI for a given question and retrieved content.
         """
-        related_content = self.retrieve_content(query)
-        return self.process_content(related_content, query)
+        if not content:
+            return "I am sorry, I could not find an exact answer for that."
+
+        prompt = f'You are given an answer and question, please create a more clear answer for the question based on the answer provided: Answer: {content[0]}, Question: {query}'
+        stream = self.openai.completions.create(
+            model="gpt-4o-mini",
+            prompt=prompt,
+            max_tokens=150,
+            temperature=0.5,
+            stream=True
+        )
+        for chunk in stream:
+            yield chunk.choices[0].text

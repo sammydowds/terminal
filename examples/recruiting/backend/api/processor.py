@@ -1,9 +1,9 @@
 from terminal.processor import Processor
 
 class ResumeProcessor(Processor):
-    def process_content(self, content, query):
+    def stream_completion(self, content, query):
         """
-        Given the relevant content, create a response to the users questions.
+        Streams the response from OpenAI for a given question and resume content.
         """
         if not content:
             return "I am sorry, I could not find an exact answer for that."
@@ -20,12 +20,13 @@ class ResumeProcessor(Processor):
             3. Maintains a professional tone
             4. Avoids adding information not present in the excerpt
         """
-        response = self.openai.completions.create(
+        
+        stream = self.openai.completions.create(
             model="gpt-3.5-turbo-instruct",
             prompt=prompt,
             max_tokens=150,
-            n=1,
-            stop=None,
             temperature=0.5,
+            stream=True
         )
-        return response.choices[0].text.strip()
+        for chunk in stream:
+            yield chunk.choices[0].text
