@@ -38,7 +38,7 @@ export default function Home() {
         <div ref={messagesEndRef} />
       </div>
       <div className="w-full fixed bottom-0 max-w-[500px] max-md:bg-white max-md:py-2 max-md:border-t-[1px]">
-        <div className="overflow-x-auto flex gap-2 whitespace-nowrap my-2 max-md:px-2">
+        <div className="flex flex-wrap max-md:flex-nowrap max-md:overflow-x-auto gap-2 my-2 max-md:px-2 w-full">
           {[
             "Have you used React?",
             "Where did you go to college?",
@@ -46,7 +46,7 @@ export default function Home() {
           ].map((question) => (
             <button
               key={question}
-              className="px-4 py-[4px] bg-white border-[1px] border-stone-400 border-dashed text-stone-600 text-sm rounded-full"
+              className="px-4 py-[4px] bg-white border-[1px] whitespace-nowrap border-stone-400 border-dashed text-stone-600 text-sm rounded-full"
               onClick={() => handleInputChange({ target: { value: question } })}
             >
               {question}
@@ -54,10 +54,8 @@ export default function Home() {
           ))}
         </div>
         <form onSubmit={handleSubmit} className="relative max-md:px-2">
-          {/* Suggested questions carousel */}
-
           <input
-            className="w-full p-3 md:mb-12 border border-gray-300 rounded md:shadow-xl text-[18px]"
+            className="w-full p-3 md:mb-12 border border-gray-300 rounded text-[18px]"
             value={input}
             placeholder="Ask something..."
             onChange={handleInputChange}
