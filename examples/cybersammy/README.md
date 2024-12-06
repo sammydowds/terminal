@@ -1,4 +1,4 @@
-<img src="../../assets/recruiting.png" alt="Background Image" style="width:100%; height:auto; border-radius:10px; margin-bottom:4px;">
+<img src="../../assets/recruiting.png" alt="Background Image" style="height:300px; border-radius:10px; margin-bottom:4px;">
 
 # CyberSammy
 
