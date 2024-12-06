@@ -27,8 +27,8 @@ class ResumeProcessor(Processor):
         stream = self.openai.chat.completions.create(
             model="gpt-4o-mini",
             messages=[{ "role": "user", "content": prompt}],
-            max_tokens=150,
-            temperature=0.2,
+            max_tokens=40,
+            temperature=0.1,
             stream=True
         )
         for chunk in stream:
