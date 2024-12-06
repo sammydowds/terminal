@@ -40,16 +40,10 @@ class Ingestor:
     embeddings_res = self.openai.embeddings.create(model='text-embedding-ada-002', input=chunk)
     return embeddings_res.data[0].embedding
   
-  def chunk_pdf(self, path):
+  def chunk_text(self, text):
     """
-    Loads a PDF file and splits its content into overlapping chunks splitting on lines.
+    Chunks text recursively.
     """
-    doc = pymupdf.open(path)
-    text = ""
-    for page in doc:
-        text += page.get_text()
-    doc.close()
-
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=100,
         chunk_overlap=0,
@@ -58,11 +52,23 @@ class Ingestor:
     )
     chunks = text_splitter.split_text(text)
     return chunks 
+  
+  def process_document(self, path):
+    """
+    Process PDF page by page, chunk, generate embeddings, and save.
+    """
+    doc = pymupdf.open(path)
+    for page in doc:
+      text = page.get_text()
+      chunks = self.chunk_text(text)
+      for chunk in chunks:
+        embedding = self.generate_embedding(chunk)
+        self.save_embedding(embedding, chunk)
+    doc.close()
 
   def ingest(self, folder=None):
     """
-    Processes PDF files in a specified folder, generating embeddings
-    for each chunk and saving them to the database.
+    Convert folder of PDFs to vectors in the database.
     """
     if folder is None:
       raise ValueError("No folder supplied for ingestion.")
@@ -76,16 +82,13 @@ class Ingestor:
       
       if not file_path.lower().endswith('.pdf'):
         continue
-        
+      
       try:
-        chunks = self.chunk_pdf(file_path)
-        for chunk in chunks:
-          embedding = self.generate_embedding(chunk)
-          self.save_embedding(embedding, chunk)
+        self.process_document(file_path)
         processed_files += 1
       except Exception as e:
         print(f"Error processing {file_path}: {e}")
-        continue
+        continue 
 
     return processed_files
 
