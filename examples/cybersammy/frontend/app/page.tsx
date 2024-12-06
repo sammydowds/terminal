@@ -64,14 +64,14 @@ export default function Home() {
             onClick={handleSubmit}
             disabled={isLoading || !input}
             className={cn(
-              "absolute top-1 md:right-2 max-md:right-3 p-2 h-11 w-11 border-2 flex items-center justify-center rounded-full bg-blue-600 text-white",
-              isLoading || !input ? "bg-stone-300" : "",
+              "absolute top-2 md:right-2 max-md:right-3 p-2 flex items-center justify-center rounded-full",
+              isLoading || !input ? "text-stone-300" : "",
             )}
           >
             {isLoading ? (
-              <LoaderCircle className="animate-spin" size={16} />
+              <LoaderCircle className="animate-spin" size={24} />
             ) : (
-              <Send size={20} />
+              <Send size={24} />
             )}
           </button>
         </form>
