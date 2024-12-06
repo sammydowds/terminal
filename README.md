@@ -34,6 +34,13 @@ ingestor = Ingestor()
 ingestor.ingest('documents')
 ```
 
-### Starting API 
+### Processing (retrieval and response) 
 
-### Frontend 
+```python
+processor = Processor()
+
+processor.retrieve_content(query) # embed, search in vector DB 
+processor.stream_completion(query) 
+# OR
+processor.completion(query)
+```
