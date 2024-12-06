@@ -1,10 +1,10 @@
 <img src="../../assets/recruiting.png" alt="Background Image" style="width:100%; height:auto; border-radius:10px; margin-bottom:4px;">
 
-# Recruiting Chatbot
+# CyberSammy
 
 ## Summary
 
-This is a chat bot that is focused on answering questions about my resume. It utilizes the tools from terminal to chunk, embed, retrieve, and generate streaming responses. 
+This is a chat bot that is focused on answering questions about my resume and job experience. It utilizes the tools from terminal to chunk, embed, retrieve, and generate streaming responses. 
 
 ## Get Started
 
