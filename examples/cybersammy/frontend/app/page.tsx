@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import { LoaderCircle, RefreshCcw, Send } from "lucide-react";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   const { input, handleInputChange, handleSubmit, messages, isLoading } =
@@ -22,39 +23,50 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-dvh overflow-y-auto bg-stone-100 text-black relative">
-      <div className="fixed top-0 left-0 w-full flex items-center p-4 bg-white shadow">
-        <Image
-          src="/cyborgsammy.png"
-          alt="Avatar"
-          width={40}
-          height={40}
-          className="rounded-lg mr-3"
-        />
-        <div>
-          <h2 className="text-sm font-semibold tracking-tighter">
-            Cyber Sammy
-          </h2>
-          <div className="text-sm text-gray-500">
-            <motion.div
-              key={isLoading ? "loading-message" : "not-loading-message"}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="flex items-center gap-[2px] text-xs"
-            >
-              {isLoading ? (
-                <div className="flex items-center gap-[4px]">
-                  <RefreshCcw size={10} className="animate-spin" />
-                  Processing...
-                </div>
-              ) : (
-                <div className="flex items-center gap-[4px]">
-                  <div className="bg-green-600 p-[4px] rounded-full" />
-                  Ready
-                </div>
-              )}
-            </motion.div>
+      <div className="fixed top-0 left-0 w-full flex items-center justify-between px-4 py-2 bg-white shadow">
+        <div className="flex items-center">
+          <Image
+            src="/cyborgsammy.png"
+            alt="Avatar"
+            width={40}
+            height={40}
+            className="rounded-lg mr-3"
+          />
+          <div>
+            <h2 className="text-sm font-semibold tracking-tighter">
+              Cyber Sammy
+            </h2>
+            <div className="text-sm text-gray-500">
+              <motion.div
+                key={isLoading ? "loading-message" : "not-loading-message"}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="flex items-center gap-[2px] text-xs"
+              >
+                {isLoading ? (
+                  <div className="flex items-center gap-[4px]">
+                    <RefreshCcw size={10} className="animate-spin" />
+                    Processing...
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-[4px]">
+                    <div className="bg-green-600 p-[4px] rounded-full" />
+                    Ready
+                  </div>
+                )}
+              </motion.div>
+            </div>
           </div>
+        </div>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/sammydowds/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FaLinkedin size={34} color="#0A66C2" />
+          </a>
         </div>
       </div>
       <div className="h-max max-md:w-full md:w-[500px] flex flex-col gap-4 pt-4 md:pb-[200px] md:pt-[125px] max-md:pt-[100px] max-md:pb-[140px] max-md:px-4">
