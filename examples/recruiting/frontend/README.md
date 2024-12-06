@@ -1,3 +1,5 @@
+<img src="../../../assets/recruiting.png" alt="Background Image" style="width:100%; height:auto; border-radius:10px; margin-bottom:4px;">
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
