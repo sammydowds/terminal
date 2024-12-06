@@ -14,21 +14,25 @@ class ResumeProcessor(Processor):
             skills, experiences, and achievements.
 
             Question: {query}
-            Resume Excerpt: {content[0]}
+            Resume Excerpts: {content[:3]}
 
             Provide a concise, natural response that:
             1. Directly addresses the question
             2. Uses relevant details from the resume excerpt
             3. Maintains a professional tone
             4. Avoids adding information not present in the excerpt
+            5. Return an answer in your own words and in less than 4 sentences 
         """
         
-        stream = self.openai.completions.create(
-            model="gpt-3.5-turbo-instruct",
-            prompt=prompt,
+        stream = self.openai.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{ "role": "user", "content": prompt}],
             max_tokens=150,
-            temperature=0.5,
+            temperature=0.2,
             stream=True
         )
         for chunk in stream:
-            yield chunk.choices[0].text
+            if chunk.choices[0].delta.content:
+                yield chunk.choices[0].delta.content
+            else:
+                yield ""

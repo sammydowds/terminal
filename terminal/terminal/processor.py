@@ -39,7 +39,7 @@ class Processor:
         Retrieves content according to threshold.
         """
         query_embedding = self.generate_embedding(query)
-        threshold = 0.3 
+        threshold = 0.33 
         self.cursor.execute("""
             SELECT content, (1 - (embedding <=> %s::vector)) AS similarity
             FROM documents
