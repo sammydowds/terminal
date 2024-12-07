@@ -7,7 +7,7 @@ class ResumeIngestor(Ingestor):
         Chunks text recursively.
         """
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=200,
+            chunk_size=300,
             chunk_overlap=0,
             length_function=len,
             separators=["\n", ".", "!", "?"]

@@ -14,7 +14,7 @@ class ResumeProcessor(Processor):
             skills, experiences, and achievements.
 
             Question: {query}
-            Resume Excerpts: {content[:3]}
+            Resume Excerpts: {content}
 
             Provide a concise, natural response that:
             1. Directly addresses the question
