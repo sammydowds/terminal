@@ -1,0 +1,228 @@
+[
+    {
+        "id": "1",
+        "name": "Double-Breasted Long Coat",
+        "department": "men's",
+        "type": "Jacket",
+        "ul": "Upper",
+        "images": [
+            "https://img.abercrombie.com/is/image/anf/KIC_132-4135-00047-900_model2.jpg?policy=product-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_132-4135-00047-900_model1.jpg?policy=product-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_132-4135-00047-900_model3.jpg?policy=product-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_132-4135-00047-900_model4.jpg?policy=product-large"
+        ],
+        "sizes": {
+            "s": 0,
+            "m": 12,
+            "l":  2 
+        },
+        "target_url": "https://www.abercrombie.com/shop/us/p/double-breasted-long-coat-58471323?faceout=life&seq=04",
+        "long_description": "Our new double-breasted coat in our soft wool-blend fabric and longer length, featuring a relaxed-fit silhouette, classic lapel detail, tonal trims and lining, back vent detail, front button closure, side pockets and interior chest pocket.  Imported.",
+        "color": "",
+        "seasons": "Fall,Winter",
+        "brand_code": "anf",
+        "brand_name": "Abecrombie & Fitch",
+        "brand_logo": "https://cdn.cookielaw.org/logos/d85fa49a-a6a8-4eed-b044-69854f66736e/40cc6464-6520-4deb-b4fa-34db7825e62a/3a278c0b-a02c-4d37-a3f7-e325b1e3c398/9b742aae-58cb-4ba9-b29c-720e30cf80af.jpg",
+        "color_options": [],
+        "gender": "M",
+        "prices": {
+            "offer": {
+                "price": 128.00,
+                "formatted": "$128",
+                "currency": "USD"
+            },
+            "list": {
+                "price": 160.00,
+                "formatted": "$160",
+                "currency": "USD"
+            }
+        }
+    },
+    {
+        "id": "2",
+        "name": "Ultra Puffer",
+        "department": "men's",
+        "type": "Jacket",
+        "ul": "Upper",
+        "target_url": "https://www.abercrombie.com/shop/us/p/ultra-puffer-58471322?faceout=model&seq=04",
+        "images": [
+            "https://img.abercrombie.com/is/image/anf/KIC_132-4141-00045-900_prod1.jpg?policy=product-extra-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_132-4141-00045-900_prod2.jpg?policy=product-extra-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_132-4141-00045-900_prod3.jpg?policy=product-extra-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_132-4141-00045-900_prod4.jpg?policy=product-extra-large"
+        ],
+        "sizes": {
+            "s": 12,
+            "m": 4,
+            "l": 20 
+        },
+        "long_description": "Our new heavyweight puffer jacket in a nylon fabric with wind- and water-resistant properties, featuring recycled fill to protect against the elements, side pockets with interior chest pocket, double zip-up front, cinched waist with adjustable bungees, mock neck collar and elastic cuffs. Imported.",
+        "color": "",
+        "seasons": "Fall,Winter",
+        "brand_code": "anf",
+        "brand_name": "Abecrombie & Fitch",
+        "brand_logo": "https://cdn.cookielaw.org/logos/d85fa49a-a6a8-4eed-b044-69854f66736e/40cc6464-6520-4deb-b4fa-34db7825e62a/3a278c0b-a02c-4d37-a3f7-e325b1e3c398/9b742aae-58cb-4ba9-b29c-720e30cf80af.jpg",
+        "color_options": [],
+        "gender": "M",
+        "prices": {
+            "offer": {
+                "price": 128.00,
+                "formatted": "$128",
+                "currency": "USD"
+            },
+            "list": {
+                "price": 160.00,
+                "formatted": "$160",
+                "currency": "USD"
+            }
+        }
+    },
+    {
+        "id": "3",
+        "name": "Oversized Waffle Crew Sweater",
+        "department": "men's",
+        "type": "Sweater",
+        "ul": "Upper",
+        "target_url": "https://www.abercrombie.com/shop/us/p/oversized-waffle-crew-sweater-58592853?categoryId=6570709&faceout=model&seq=03",
+        "images": [
+            "https://img.abercrombie.com/is/image/anf/KIC_120-4329-00420-900_prod1.jpg?policy=product-large"
+        ],
+        "sizes": {
+            "s": 3,
+            "m": 1,
+            "l": 2 
+        },
+        "long_description": "Easy-fitting sweater in a cozy sweater-knit fabric and oversized-fit silhouette with a slightly cropped body length, featuring acid wash details throughout, crew neckline and banded hem and cuffs. Imported.",
+        "color": "",
+        "seasons": "Fall,Winter",
+        "brand_code": "anf",
+        "brand_name": "Abecrombie & Fitch",
+        "brand_logo": "https://cdn.cookielaw.org/logos/d85fa49a-a6a8-4eed-b044-69854f66736e/40cc6464-6520-4deb-b4fa-34db7825e62a/3a278c0b-a02c-4d37-a3f7-e325b1e3c398/9b742aae-58cb-4ba9-b29c-720e30cf80af.jpg",
+        "color_options": [],
+        "gender": "M",
+        "prices": {
+            "offer": {
+                "price": 80,
+                "formatted": "$80",
+                "currency": "USD"
+            },
+            "list": {
+                "price": 80,
+                "formatted": "$80",
+                "currency": "USD"
+            }
+        }
+    },
+    {
+        "id": "4",
+        "name": "A&F All-Day Pull-On Short",
+        "department": "men's",
+        "type": "Shorts",
+        "ul": "Lower",
+        "target_url": "https://www.abercrombie.com/shop/us/p/a-and-f-all-day-pull-on-short-58670324?faceout=model&seq=01",
+        "images": [
+            "https://img.abercrombie.com/is/image/anf/KIC_128-4099-0073-230_prod1.jpg?policy=product-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_128-4099-0073-230_prod2.jpg?policy=product-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_128-4099-0073-230_prod3.jpg?policy=product-large"
+        ],
+        "sizes": {
+            "s": 3,
+            "m": 10,
+            "l": 20 
+        },
+        "long_description": "Comfortable 6 inch (15 cm) plainfront shorts made to wear 24/7 in our versatile and stretchy All-Day fabric and tailored fit, with breathable and moisture-wicking properties. Featuring a soft pull-on style waistband and hidden cellphone pocket, so you can tackle activities all day, everyday. Imported.",
+        "color": "",
+        "seasons": "Summer",
+        "brand_code": "anf",
+        "brand_name": "Abecrombie & Fitch",
+        "brand_logo": "https://cdn.cookielaw.org/logos/d85fa49a-a6a8-4eed-b044-69854f66736e/40cc6464-6520-4deb-b4fa-34db7825e62a/3a278c0b-a02c-4d37-a3f7-e325b1e3c398/9b742aae-58cb-4ba9-b29c-720e30cf80af.jpg",
+        "color_options": [],
+        "gender": "M",
+        "prices": {
+            "offer": {
+                "price": 26.99,
+                "formatted": "$26.99",
+                "currency": "USD"
+            },
+            "list": {
+                "price": 60,
+                "formatted": "$60",
+                "currency": "USD"
+            }
+        }
+    },
+    {
+        "id": "5",
+        "name": "Premium Heavyweight Slub Cropped Tee",
+        "department": "men's",
+        "type": "Short-Sleeve T-Shirt",
+        "ul": "Upper",
+        "target_url": "https://www.abercrombie.com/shop/us/p/premium-heavyweight-slub-cropped-tee-58842820?faceout=model&seq=04",
+        "images": [
+            "https://img.abercrombie.com/is/image/anf/KIC_124-5126-00421-900_model2.jpg?policy=product-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_124-5126-00421-900_model1.jpg?policy=product-large",
+            "https://img.abercrombie.com/is/image/anf/KIC_124-5126-00421-900_model3.jpg?policy=product-large"
+        ],
+        "sizes": {
+            "s": 3,
+            "m": 10,
+            "l": 20 
+        },
+        "long_description": "Our new short-sleeve tee in a heavyweight 325g slub fabric and oversized-fit silhouette, featuring a cropped length that fits like our Premium Heavyweight Cropped Tee! Imported.",
+        "color": "",
+        "seasons": "Summer,Fall",
+        "brand_code": "anf",
+        "brand_name": "Abecrombie & Fitch",
+        "brand_logo": "https://cdn.cookielaw.org/logos/d85fa49a-a6a8-4eed-b044-69854f66736e/40cc6464-6520-4deb-b4fa-34db7825e62a/3a278c0b-a02c-4d37-a3f7-e325b1e3c398/9b742aae-58cb-4ba9-b29c-720e30cf80af.jpg",
+        "color_options": [],
+        "gender": "M",
+        "prices": {
+            "offer": {
+                "price": 20,
+                "formatted": "$20",
+                "currency": "USD"
+            },
+            "list": {
+                "price": 30,
+                "formatted": "$30",
+                "currency": "USD"
+            }
+        }
+    },
+    {
+        "id": "6",
+        "name": "Essential Tee",
+        "department": "men's",
+        "type": "Short-Sleeve T-Shirt",
+        "ul": "Upper",
+        "target_url": "https://www.abercrombie.com/shop/us/p/essential-pocket-tee-53262319?faceout=model&seq=86",
+        "images": [
+            "https://img.abercrombie.com/is/image/anf/KIC_124-4465-00304-175_prod1.jpg?policy=product-large"
+        ],
+        "sizes": {
+            "s": 3,
+            "m": 10,
+            "l": 20 
+        },
+        "long_description": "Our new short-sleeve tee in a heavyweight 325g slub fabric and oversized-fit silhouette, featuring a cropped length that fits like our Premium Heavyweight Cropped Tee! Imported.",
+        "color": "",
+        "seasons": "Summer",
+        "brand_code": "anf",
+        "brand_name": "Abecrombie & Fitch",
+        "brand_logo": "https://cdn.cookielaw.org/logos/d85fa49a-a6a8-4eed-b044-69854f66736e/40cc6464-6520-4deb-b4fa-34db7825e62a/3a278c0b-a02c-4d37-a3f7-e325b1e3c398/9b742aae-58cb-4ba9-b29c-720e30cf80af.jpg",
+        "color_options": [],
+        "gender": "M",
+        "prices": {
+            "offer": {
+                "price": 20,
+                "formatted": "$20",
+                "currency": "USD"
+            },
+            "list": {
+                "price": 30,
+                "formatted": "$30",
+                "currency": "USD"
+            }
+        }
+    }
+]
