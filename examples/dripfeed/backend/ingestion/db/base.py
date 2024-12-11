@@ -31,5 +31,5 @@ class Product(Base):
 
 class ProductEmbeddings(Base):
     __tablename__ = 'product_embeddings'
-    productId: Mapped[str] = mapped_column(String, primary_key=True) 
+    product_id: Mapped[str] = mapped_column(String, primary_key=True) 
     embedding: Mapped[Vector] = mapped_column(Vector(1536)) 
