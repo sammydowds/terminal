@@ -55,3 +55,9 @@ This will loop through every product in the database and generate embeddings off
 Now you have a database running with `product_table` and `product_embeddings` table populated. Note: yes, we are using both `psycopg2` (ingestion) and `sqlalchemy` (seeding)... we never said we were perfect 😉 
 
 Your database is now ready for the API.
+
+### Start the API
+
+```
+fastapi dev api/main.py
+```
