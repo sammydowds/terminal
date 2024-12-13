@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: dripfeed_container 
+    environment:
+      POSTGRES_USER: user 
+      POSTGRES_PASSWORD: password123 
+      POSTGRES_DB: dripfeed 
+    ports:
+      - "5432:5432"
+    volumes:
+      - dripfeed-data:/var/lib/postgresql/data
+
+volumes:
+  dripfeed-data:
