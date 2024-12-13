@@ -5,12 +5,7 @@
         "department": "men's",
         "type": "Jacket",
         "ul": "Upper",
-        "images": [
-            "https://img.abercrombie.com/is/image/anf/KIC_132-4135-00047-900_model2.jpg?policy=product-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_132-4135-00047-900_model1.jpg?policy=product-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_132-4135-00047-900_model3.jpg?policy=product-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_132-4135-00047-900_model4.jpg?policy=product-large"
-        ],
+        "image": "https://img.abercrombie.com/is/image/anf/KIC_132-4135-00047-900_model2.jpg?policy=product-large",
         "sizes": {
             "s": 0,
             "m": 12,
@@ -45,12 +40,7 @@
         "type": "Jacket",
         "ul": "Upper",
         "target_url": "https://www.abercrombie.com/shop/us/p/ultra-puffer-58471322?faceout=model&seq=04",
-        "images": [
-            "https://img.abercrombie.com/is/image/anf/KIC_132-4141-00045-900_prod1.jpg?policy=product-extra-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_132-4141-00045-900_prod2.jpg?policy=product-extra-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_132-4141-00045-900_prod3.jpg?policy=product-extra-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_132-4141-00045-900_prod4.jpg?policy=product-extra-large"
-        ],
+        "image": "https://img.abercrombie.com/is/image/anf/KIC_132-4141-00045-900_prod1.jpg?policy=product-extra-large",
         "sizes": {
             "s": 12,
             "m": 4,
@@ -84,9 +74,7 @@
         "type": "Sweater",
         "ul": "Upper",
         "target_url": "https://www.abercrombie.com/shop/us/p/oversized-waffle-crew-sweater-58592853?categoryId=6570709&faceout=model&seq=03",
-        "images": [
-            "https://img.abercrombie.com/is/image/anf/KIC_120-4329-00420-900_prod1.jpg?policy=product-large"
-        ],
+        "image": "https://img.abercrombie.com/is/image/anf/KIC_120-4329-00420-900_prod1.jpg?policy=product-large",
         "sizes": {
             "s": 3,
             "m": 1,
@@ -120,11 +108,7 @@
         "type": "Shorts",
         "ul": "Lower",
         "target_url": "https://www.abercrombie.com/shop/us/p/a-and-f-all-day-pull-on-short-58670324?faceout=model&seq=01",
-        "images": [
-            "https://img.abercrombie.com/is/image/anf/KIC_128-4099-0073-230_prod1.jpg?policy=product-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_128-4099-0073-230_prod2.jpg?policy=product-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_128-4099-0073-230_prod3.jpg?policy=product-large"
-        ],
+        "image": "https://img.abercrombie.com/is/image/anf/KIC_128-4099-0073-230_prod1.jpg?policy=product-large",
         "sizes": {
             "s": 3,
             "m": 10,
@@ -158,11 +142,7 @@
         "type": "Short-Sleeve T-Shirt",
         "ul": "Upper",
         "target_url": "https://www.abercrombie.com/shop/us/p/premium-heavyweight-slub-cropped-tee-58842820?faceout=model&seq=04",
-        "images": [
-            "https://img.abercrombie.com/is/image/anf/KIC_124-5126-00421-900_model2.jpg?policy=product-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_124-5126-00421-900_model1.jpg?policy=product-large",
-            "https://img.abercrombie.com/is/image/anf/KIC_124-5126-00421-900_model3.jpg?policy=product-large"
-        ],
+        "image": "https://img.abercrombie.com/is/image/anf/KIC_124-5126-00421-900_model2.jpg?policy=product-large",
         "sizes": {
             "s": 3,
             "m": 10,
@@ -196,9 +176,7 @@
         "type": "Short-Sleeve T-Shirt",
         "ul": "Upper",
         "target_url": "https://www.abercrombie.com/shop/us/p/essential-pocket-tee-53262319?faceout=model&seq=86",
-        "images": [
-            "https://img.abercrombie.com/is/image/anf/KIC_124-4465-00304-175_prod1.jpg?policy=product-large"
-        ],
+        "image": "https://img.abercrombie.com/is/image/anf/KIC_124-4465-00304-175_prod1.jpg?policy=product-large",
         "sizes": {
             "s": 3,
             "m": 10,

@@ -5,6 +5,8 @@ from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from pgvector.sqlalchemy import Vector
+from sqlalchemy.dialects.postgresql import ARRAY
+
 
 class Base(DeclarativeBase):
     pass
@@ -16,7 +18,7 @@ class Product(Base):
     department: Mapped[str] = mapped_column(String)
     type: Mapped[str] = mapped_column(String)
     ul: Mapped[str] = mapped_column(String) 
-    images: Mapped[List[str]] = mapped_column(String) 
+    image: Mapped[str] = mapped_column(String) 
     sizes: Mapped[dict] = mapped_column(JSON)  
     long_description: Mapped[str] = mapped_column(String)  
     color: Mapped[str] = mapped_column(String)  

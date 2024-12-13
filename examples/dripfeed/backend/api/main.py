@@ -29,7 +29,7 @@ async def related(payload: RelatedPayload):
     if not query:
         return {"error": "Missing 'query' is required."}, 400
     products = processor.find_related(query)
-    return { "data": products }, 200
+    return { "data": products }
 
 @app.post("/api/similar")
 async def similar(payload: SimilarPayload):
@@ -37,4 +37,4 @@ async def similar(payload: SimilarPayload):
     if not id:
         return {"error": "Missing 'product_id' is required."}, 400
     products = processor.lookup_similar_products(id)
-    return { "data": products }, 200
+    return { "data": products }

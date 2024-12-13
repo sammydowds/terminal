@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from openai import OpenAI 
 import psycopg2
+from psycopg2.extras import DictCursor
 import os
 
 load_dotenv()
@@ -14,7 +15,7 @@ class Processor:
         """
         try:
             self.db = psycopg2.connect(DB_URL)
-            self.cursor = self.db.cursor()
+            self.cursor = self.db.cursor(cursor_factory=DictCursor)
             self.openai = OpenAI()
         except psycopg2.Error as e:
             raise ConnectionError(f"Failed to connect to database: {e}")

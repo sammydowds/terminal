@@ -29,7 +29,7 @@ def seed_data():
             department=product.get('department'),
             type=product.get('type'),
             ul=product.get('ul'),
-            images=product.get('images', []), 
+            image=product.get('image'), 
             sizes=product.get('sizes', {}),
             long_description=product.get('long_description'),
             color=product.get('color'),

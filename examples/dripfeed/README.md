@@ -4,6 +4,11 @@
 
 Dripfeed is an MVP of a database of vectorized products, allowing users to explore products and similar products.
 
+## Sample
+
+<img src="../../assets/dripfeed1.png" alt="sample" style="width:100%; height:auto; border-radius:10px; margin-bottom:4px;">
+<img src="../../assets/dripfeed2.png" alt="sample2" style="width:100%; height:auto; border-radius:10px; margin-bottom:4px;">
+
 ## Scope
 
 ### Product details page
@@ -19,9 +24,7 @@ Pages
 - Detail page: looks up product, fetches similar products based on descriptions and attributes
 
 API
-- /api/search, process query and find 5 related products
-- /api/product/:id, return data for product
-- /api/similar/:id, return similar results for the given product id
+- /api/related, process query and find 5 related products
 
 Services
 - (optional) Ingestion: take picture of product, and create description
